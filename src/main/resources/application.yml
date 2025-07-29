@@ -1,0 +1,38 @@
+spring:
+
+  main:
+    web-application-type: servlet
+
+  application:
+    name: boot-ai
+  ai:
+    chat:
+      client:
+        enabled: false
+    openai:
+      api-key:  ${ai.openai.api-key}
+    gemini:
+      api-key: ${ai.gemini.api-key}
+      project-id: "linear-aviary-298205"
+      location: "us-central1"
+      model: "gemini-1.0-pro"
+      credentials-path: "classpath:/linear-aviary-298205-4522f5a43b70.json"
+    perplexity:
+      api-key: ${ai.perplexity.api-key}
+      url: "https://api.perplexity.ai/chat/completions"
+    claude:
+      api-key: ${ai.claude.api-key}
+      url: "https://api.anthropic.com/v1/messages"
+      version: "2023-06-01"
+
+server:
+  port: 8090
+
+logging:
+  level:
+    org:
+      springframework:
+        ai: DEBUG
+        opemai: debug
+        web:
+          client: trace
