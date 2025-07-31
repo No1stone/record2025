@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: boot-translate-api
+
+server:
+  port: 8091
+
+key:
+  google:
+    tanslate:
+      apikey: ${google.translate.apikey}
+  naver:
+    papago:
+      clientId: ${key.naver.papago.clientId}
+      clientSecret: ${key.naver.papago.clientSecret}
+  deepl:
+    authkey: ${key.deepl.authkey}
+
