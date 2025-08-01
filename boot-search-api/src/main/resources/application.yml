@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: boot-search-api
+
+key:
+  search:
+    google:
+      api: ${google-search-key}
+      cx: ${google-cx-id}
