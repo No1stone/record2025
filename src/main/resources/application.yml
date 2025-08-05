@@ -1,0 +1,16 @@
+
+
+spring:
+  application:
+    name: spring-vault
+  cloud:
+    vault:
+      uri: http://localhost:8200
+      token: myroot
+      kv:
+        enabled: true
+        backend: secret
+        default-context: myapp
+
+server:
+  port: 8201
